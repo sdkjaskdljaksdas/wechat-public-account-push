@@ -1,0 +1,15 @@
+{
+    "apps": [
+      {
+        "name": "wechat-push",
+        "script": "start_pm2.js",
+        "instances": "max",
+        "exec_mode": "cluster",
+        "watch": false,
+        "env": {
+          "NODE_ENV": "production",
+          "APP_MODE": "server"
+        }
+      }
+    ]
+  }

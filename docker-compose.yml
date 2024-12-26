@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  wechat-push:
+    build: .
+    image: wechat-push:0.0.1
+    volumes:
+      - .:/app
+    environment:
+      - NODE_ENV=production
+      - CRON_TIME=0 0 9 * * *
+    restart: always
